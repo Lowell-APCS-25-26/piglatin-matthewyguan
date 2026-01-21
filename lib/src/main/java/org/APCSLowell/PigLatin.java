@@ -2,8 +2,8 @@ package org.APCSLowell;
 
 public class PigLatin {
     public int findFirstVowel(String sWord) {
-        for (int i = 0; i < word.length(); i++) {
-    		if (word.substring(i,i+1).equals("a")||word.substring(i,i+1).equals("e")||word.substring(i,i+1).equals("i")||word.substring(i,i+1).equals("o")||word.substring(i,i+1).equals("u")){
+        for (int i = 0; i < sWord.length(); i++) {
+    		if (sWord.substring(i,i+1).equals("a")||sWord.substring(i,i+1).equals("e")||sWord.substring(i,i+1).equals("i")||sWord.substring(i,i+1).equals("o")||sWord.substring(i,i+1).equals("u")){
       			return i;
     		}
   		}
@@ -21,8 +21,7 @@ public class PigLatin {
 			return sWord.substring(2,sWord.length()) + "quay";
 		}
 		else {
-			return sWord.substring(findFirstVowel(sWord), sWord.length()) + sWord.substring(0, findFirstVowel(sWord));
+			return sWord.substring(findFirstVowel(sWord), sWord.length()) + sWord.substring(0, findFirstVowel(sWord)) + "ay";
 		}
-        return null;
     }
 }
